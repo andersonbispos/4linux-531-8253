@@ -1,3 +1,5 @@
 .DS_Store
 .terraform.lock.hcl
 *.terraform*
+02-labs/LAB01/terraform.tfstate.backup
+02-labs/LAB01/terraform.tfstate
