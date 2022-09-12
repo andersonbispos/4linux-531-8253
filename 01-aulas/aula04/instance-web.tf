@@ -11,15 +11,13 @@ resource "google_compute_instance" "web1" {
 
   network_interface {
     subnetwork = google_compute_subnetwork.subnet1.self_link
+    access_config {
+      
+    }
   }
-
-  depends_on = [
-    google_compute_instance.vm_db,
-    google_compute_firewall.default
-  ]
 }
 
-resource "google_compute_instance" "web2" {
+/* resource "google_compute_instance" "web2" {
   name         = "web2"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
@@ -38,4 +36,4 @@ resource "google_compute_instance" "web2" {
     google_compute_instance.vm_db,
     google_compute_firewall.default
   ]
-}
+} */

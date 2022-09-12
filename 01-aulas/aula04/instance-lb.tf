@@ -1,4 +1,4 @@
-resource "google_compute_instance" "lb" {
+/* resource "google_compute_instance" "lb" {
   name         = "lb"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
@@ -18,4 +18,4 @@ resource "google_compute_instance" "lb" {
     google_compute_instance.web2
   ]
 
-}
+} */

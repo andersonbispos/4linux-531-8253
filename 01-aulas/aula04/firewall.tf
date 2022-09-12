@@ -13,3 +13,15 @@ resource "google_compute_firewall" "default" {
 
   source_ranges = ["0.0.0.0/0"]
 }
+
+resource "google_compute_firewall" "default_http" {
+    name                    = "default-http"
+    network                 = "default"
+
+    source_ranges           = ["0.0.0.0/0"]
+
+    allow {
+        ports    = ["80"]
+        protocol = "tcp"
+    }
+}
