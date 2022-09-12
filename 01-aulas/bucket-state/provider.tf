@@ -5,11 +5,6 @@ terraform {
       version = "4.35.0"
     }
   }
-
-  backend "gcs" {
-    bucket  = "backend-terraform-abs"
-    prefix  = "state"
-  }
 }
 
 provider "google" {
