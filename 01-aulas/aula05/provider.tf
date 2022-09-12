@@ -7,8 +7,8 @@ terraform {
   }
 
   backend "gcs" {
-    bucket  = "backend-terraform-abs"
-    prefix  = "state"
+    bucket      = "backend-terraform-abs"
+    prefix      = "state"
     credentials = "/Users/anderson/Documents/gcp-svc/terraform-4linux-8253-f6be2bb58711.json"
   }
 }

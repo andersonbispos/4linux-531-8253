@@ -1,5 +1,5 @@
 resource "google_compute_firewall" "default" {
-  name    = "test-firewall"
+  name = "test-firewall"
   #network       =  "vpc-network"
   network = google_compute_network.vpc_network.self_link
 
@@ -9,7 +9,7 @@ resource "google_compute_firewall" "default" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22","80","443"]
+    ports    = ["22", "80", "443"]
   }
 
   source_ranges = ["0.0.0.0/0"]
