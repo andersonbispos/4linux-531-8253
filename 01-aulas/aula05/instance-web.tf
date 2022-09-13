@@ -1,7 +1,9 @@
-resource "google_compute_instance" "vm_db" {
-  name         = "vm-db"
+resource "google_compute_instance" "web1" {
+  name         = "web1"
   machine_type = "e2-medium"
-  zone         = local.db_zone
+  zone         = "us-central1-a"
+
+  tags = ["allow-http"]
 
   boot_disk {
     initialize_params {
@@ -12,10 +14,10 @@ resource "google_compute_instance" "vm_db" {
   network_interface {
     subnetwork = google_compute_subnetwork.subnet1.self_link
     access_config {
+
     }
   }
 
-  attached_disk {
-    source = google_compute_disk.db_data_disk.self_link
-  }
+  metadata_startup_script = file(var.prov_path_file)
+
 }

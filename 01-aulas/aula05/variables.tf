@@ -43,3 +43,8 @@ variable "db_disk_size" {
     error_message = "Tamanho máximo do disco de dados é de 50GB"
   }
 }
+
+variable "prov_path_file" {
+  description = "Caminho do arquivo de provisionamento"
+  default     = "./scripts/prov-back.sh"
+}
