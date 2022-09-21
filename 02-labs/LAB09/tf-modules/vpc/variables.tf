@@ -1,7 +1,7 @@
 variable "auto_create_subnetworks" {
   description = "Definie se devem ser criadas subnets automaticamente"
   type        = bool
-  defaul = "false"
+  default = "false"
 }
 
 variable "vpc_project" {
