@@ -35,8 +35,8 @@ variable "default_group_sizes" {
   type        = map(number)
   description = "Quantidade de instancias por regiao"
   default = {
-    us-central = 2
-    us-east = 2
-    sp = 2
+    us-central = 1
+    us-east = 0
+    sp = 3
   }
 }
